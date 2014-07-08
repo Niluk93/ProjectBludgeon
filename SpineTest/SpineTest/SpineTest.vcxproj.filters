@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\spine">
+      <UniqueIdentifier>{8137d3ce-4673-4495-9a45-4781527f2857}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\spine\sfml">
+      <UniqueIdentifier>{e5d593c6-588e-41b1-93d0-b80ed03e90a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameEngine">
+      <UniqueIdentifier>{a8976747-e4b3-4afb-8007-af1fb0d240c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameEngine">
+      <UniqueIdentifier>{a5d55850-4b7d-4a01-bed1-6b23c04592c4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="spine\Animation.c">
+      <Filter>Source Files\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="spine\AnimationState.c">
+      <Filter>Source Files\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="spine\AnimationStateData.c">
+      <Filter>Source Files\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="spine\Atlas.c">
+      <Filter>Source Files\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="spine\AtlasAttachmentLoader.c">
+      <Filter>Source Files\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="spine\Attachment.c">
+      <Filter>Source Files\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="spine\AttachmentLoader.c">
+      <Filter>Source Files\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="spine\Bone.c">
+      <Filter>Source Files\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="spine\BoneData.c">
+      <Filter>Source Files\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="spine\BoundingBoxAttachment.c">
+      <Filter>Source Files\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="spine\Event.c">
+      <Filter>Source Files\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="spine\EventData.c">
+      <Filter>Source Files\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="spine\extension.c">
+      <Filter>Source Files\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="spine\Json.c">
+      <Filter>Source Files\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="spine\MeshAttachment.c">
+      <Filter>Source Files\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="spine\RegionAttachment.c">
+      <Filter>Source Files\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="spine\Skeleton.c">
+      <Filter>Source Files\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="spine\SkeletonBounds.c">
+      <Filter>Source Files\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="spine\SkeletonData.c">
+      <Filter>Source Files\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="spine\SkeletonJson.c">
+      <Filter>Source Files\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="spine\Skin.c">
+      <Filter>Source Files\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="spine\SkinnedMeshAttachment.c">
+      <Filter>Source Files\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="spine\Slot.c">
+      <Filter>Source Files\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="spine\SlotData.c">
+      <Filter>Source Files\spine</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="spine\sfml\spine-sfml.cpp">
+      <Filter>Source Files\spine\sfml</Filter>
+    </ClCompile>
+    <ClCompile Include="GESpineSprite.cpp">
+      <Filter>Source Files\GameEngine</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="spine\Json.h">
+      <Filter>Source Files\spine</Filter>
+    </ClInclude>
+    <ClInclude Include="GESpineSprite.h">
+      <Filter>Header Files\GameEngine</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
