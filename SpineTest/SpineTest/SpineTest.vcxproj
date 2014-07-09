@@ -53,12 +53,12 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>D:\Visual Studio Add-Ons\Spine\spine-runtimes-master\spine-sfml\include;D:\Visual Studio Add-Ons\Spine\spine-runtimes-master\spine-c\include;D:\Visual Studio Add-Ons\SFML-2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Niluk93\Documents\GitHub\ProjectBludgeon\SpineTest\SpineTest\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>D:\Visual Studio Add-Ons\SFML-2.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Niluk93\Documents\GitHub\ProjectBludgeon\SpineTest\SpineTest\lib\SFML;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-main-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -81,37 +81,36 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="GESpineSprite.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="spine\Animation.c" />
-    <ClCompile Include="spine\AnimationState.c" />
-    <ClCompile Include="spine\AnimationStateData.c" />
-    <ClCompile Include="spine\Atlas.c" />
-    <ClCompile Include="spine\AtlasAttachmentLoader.c" />
-    <ClCompile Include="spine\Attachment.c" />
-    <ClCompile Include="spine\AttachmentLoader.c" />
-    <ClCompile Include="spine\Bone.c" />
-    <ClCompile Include="spine\BoneData.c" />
-    <ClCompile Include="spine\BoundingBoxAttachment.c" />
-    <ClCompile Include="spine\Event.c" />
-    <ClCompile Include="spine\EventData.c" />
-    <ClCompile Include="spine\extension.c" />
-    <ClCompile Include="spine\Json.c" />
-    <ClCompile Include="spine\MeshAttachment.c" />
-    <ClCompile Include="spine\RegionAttachment.c" />
-    <ClCompile Include="spine\sfml\spine-sfml.cpp" />
-    <ClCompile Include="spine\Skeleton.c" />
-    <ClCompile Include="spine\SkeletonBounds.c" />
-    <ClCompile Include="spine\SkeletonData.c" />
-    <ClCompile Include="spine\SkeletonJson.c" />
-    <ClCompile Include="spine\Skin.c" />
-    <ClCompile Include="spine\SkinnedMeshAttachment.c" />
-    <ClCompile Include="spine\Slot.c" />
-    <ClCompile Include="spine\SlotData.c" />
+    <ClInclude Include="Header\GESpineSprite.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GESpineSprite.h" />
-    <ClInclude Include="spine\Json.h" />
+    <ClCompile Include="src\GESpineSprite.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\SDK\spine\Animation.c" />
+    <ClCompile Include="src\SDK\spine\AnimationState.c" />
+    <ClCompile Include="src\SDK\spine\AnimationStateData.c" />
+    <ClCompile Include="src\SDK\spine\Atlas.c" />
+    <ClCompile Include="src\SDK\spine\AtlasAttachmentLoader.c" />
+    <ClCompile Include="src\SDK\spine\Attachment.c" />
+    <ClCompile Include="src\SDK\spine\AttachmentLoader.c" />
+    <ClCompile Include="src\SDK\spine\Bone.c" />
+    <ClCompile Include="src\SDK\spine\BoneData.c" />
+    <ClCompile Include="src\SDK\spine\BoundingBoxAttachment.c" />
+    <ClCompile Include="src\SDK\spine\Event.c" />
+    <ClCompile Include="src\SDK\spine\EventData.c" />
+    <ClCompile Include="src\SDK\spine\extension.c" />
+    <ClCompile Include="src\SDK\spine\Json.c" />
+    <ClCompile Include="src\SDK\spine\MeshAttachment.c" />
+    <ClCompile Include="src\SDK\spine\RegionAttachment.c" />
+    <ClCompile Include="src\SDK\spine\sfml\spine-sfml.cpp" />
+    <ClCompile Include="src\SDK\spine\Skeleton.c" />
+    <ClCompile Include="src\SDK\spine\SkeletonBounds.c" />
+    <ClCompile Include="src\SDK\spine\SkeletonData.c" />
+    <ClCompile Include="src\SDK\spine\SkeletonJson.c" />
+    <ClCompile Include="src\SDK\spine\Skin.c" />
+    <ClCompile Include="src\SDK\spine\SkinnedMeshAttachment.c" />
+    <ClCompile Include="src\SDK\spine\Slot.c" />
+    <ClCompile Include="src\SDK\spine\SlotData.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
