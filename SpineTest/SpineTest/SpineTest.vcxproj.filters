@@ -28,10 +28,28 @@
     <Filter Include="Source Files\SDK\spine\sfml">
       <UniqueIdentifier>{1ed0f7eb-7485-4440-b621-6272f01f583d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\SDK\Tmx">
+      <UniqueIdentifier>{f2e077f8-7e1f-4db4-9bf6-c770c1efd95b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header\GESpineSprite.h">
       <Filter>Header Files\GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Animation.h">
+      <Filter>Source Files\GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game.h">
+      <Filter>Source Files\GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IScene.h">
+      <Filter>Source Files\GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sceneManager.h">
+      <Filter>Source Files\GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Level.h">
+      <Filter>Source Files\GameEngine</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -113,8 +131,35 @@
     <ClCompile Include="src\GESpineSprite.cpp">
       <Filter>Source Files\GameEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\Animation.cpp">
+      <Filter>Source Files\GameEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game.cpp">
+      <Filter>Source Files\GameEngine</Filter>
+    </ClCompile>
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SDK\TmxLoader\DebugShape.cpp">
+      <Filter>Source Files\SDK\Tmx</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SDK\TmxLoader\MapLayer.cpp">
+      <Filter>Source Files\SDK\Tmx</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SDK\TmxLoader\MapLoaderPrivate.cpp">
+      <Filter>Source Files\SDK\Tmx</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SDK\TmxLoader\MapLoaderPublic.cpp">
+      <Filter>Source Files\SDK\Tmx</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SDK\TmxLoader\MapObject.cpp">
+      <Filter>Source Files\SDK\Tmx</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SDK\TmxLoader\pugixml.cpp">
+      <Filter>Source Files\SDK\Tmx</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SDK\TmxLoader\QuadTreeNode.cpp">
+      <Filter>Source Files\SDK\Tmx</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

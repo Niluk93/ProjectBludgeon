@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="isometric" width="100" height="100" tilewidth="64" tileheight="32">
+ <tileset firstgid="1" name="iso-64x64-outside" tilewidth="64" tileheight="64">
+  <image source="../../../../../../Downloads/iso-64x64-outside.png" width="640" height="1024"/>
+ </tileset>
+ <layer name="Terrain_2" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt1zEKwzAMQFGTi8R12g5p73++JpsxhHQJFvEb3uZB6IPAU0ppAoCLvTZL4xFgrpGVgybPALPdWb3vdfOufA+a9J75ztp9n9FDj5FkPUIpeoST9Qil6BFO/qPF/mYOMOsozpp8kv9gjya19k/oXvVX93GvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADG8wOErl+U
+  </data>
+ </layer>
+ <layer name="Vegitation" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJzt1aEKhEAUBdD5J8HqNywIwvbN5g0ms9nf3SdrESwGfWHOgRtmmHDh8ZhSAOB5bXaBCswX3o7FTKjTcnL3jgxPF+GgiUyRrvzn8cmtU7Xtf1gj3/3cR155daq37caYXYKDJrsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALf5AfLzB0Q=
+  </data>
+ </layer>
+ <layer name="Rock_1" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJztzjEBAAAMAiCb2b+VMbYDEpAAAAC9DgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG8MVzQAQA==
+  </data>
+ </layer>
+ <layer name="Rock_2" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJztzjEBAAAIA6A1s38rE+zVBxKQAABwbb4DAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAVAu6oABA
+  </data>
+ </layer>
+ <layer name="Rock_4" width="100" height="100">
+  <data encoding="base64" compression="zlib">
+   eJztzgENAAAIA6BHs38qY3w6SEACAHw37QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAcsrJrAEE=
+  </data>
+ </layer>
+</map>

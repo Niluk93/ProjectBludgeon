@@ -41,6 +41,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)/Include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)/Lib/zlib;$(ProjectDir)/Lib/SFML;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -59,7 +61,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Users\Niluk93\Documents\GitHub\ProjectBludgeon\SpineTest\SpineTest\lib\SFML;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-main-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-main-d.lib;zdll.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -82,8 +84,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Header\GESpineSprite.h" />
+    <ClInclude Include="src\Animation.h" />
+    <ClInclude Include="src\game.h" />
+    <ClInclude Include="src\IScene.h" />
+    <ClInclude Include="src\Level.h" />
+    <ClInclude Include="src\sceneManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Animation.cpp" />
+    <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\GESpineSprite.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\SDK\spine\Animation.c" />
@@ -111,6 +120,13 @@
     <ClCompile Include="src\SDK\spine\SkinnedMeshAttachment.c" />
     <ClCompile Include="src\SDK\spine\Slot.c" />
     <ClCompile Include="src\SDK\spine\SlotData.c" />
+    <ClCompile Include="src\SDK\TmxLoader\DebugShape.cpp" />
+    <ClCompile Include="src\SDK\TmxLoader\MapLayer.cpp" />
+    <ClCompile Include="src\SDK\TmxLoader\MapLoaderPrivate.cpp" />
+    <ClCompile Include="src\SDK\TmxLoader\MapLoaderPublic.cpp" />
+    <ClCompile Include="src\SDK\TmxLoader\MapObject.cpp" />
+    <ClCompile Include="src\SDK\TmxLoader\pugixml.cpp" />
+    <ClCompile Include="src\SDK\TmxLoader\QuadTreeNode.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
