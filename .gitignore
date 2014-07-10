@@ -34,3 +34,15 @@ Icon
 # Files that might appear on external disk
 .Spotlight-V100
 .Trashes
+
+SpineTest/Debug/SpineTest.exe
+SpineTest/Debug/SpineTest.exe
+SpineTest/Debug/SpineTest.ilk
+SpineTest/Debug/SpineTest.pdb
+SpineTest/SpineTest.sdf
+SpineTest/SpineTest.v12.suo
+*.obj
+SpineTest/SpineTest/Debug/SpineTest.log
+*.tlog
+*.lastbuildstate
+*.pdb
