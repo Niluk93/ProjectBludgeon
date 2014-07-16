@@ -1,11 +1,14 @@
+#pragma once
 #include <SFML\System.hpp>
+#include <Sage\game.h>
+#include <Sage\IScene.h>
 
-#include "game.h"
-#include "IScene.h"
-#include "sceneManager.h"
 
 // Include the custom build scenes
-#include "Level.h"
+#include <Bludgeon\menu.h>
+#include <Bludgeon\Level.h>
+
+using namespace sage;
 
 
 Game::Game():
@@ -25,19 +28,22 @@ void Game::init()
 	window.setVerticalSyncEnabled(true);
 	//window.setIcon(60,60,icon.getPixelsPtr());
 	//window.setFramerateLimit(60);
+	
 
-	SceneManager::GetInstance()->Init();
+	sceneManager.Init();
 	//create scenes
 
+	menu = new menu_scene();
 	demo = new level_scene();
 	
-
-	SceneManager::GetInstance()->AddScene(demo);
 	
-	SceneManager::GetInstance()->changeScene("LEVEL_DEMO");
+
+	sceneManager.AddScene(demo);
+	sceneManager.AddScene(menu);
+	sceneManager.changeScene("LEVEL_DEMO");
 
 	std::vector<IScene*>::iterator itr;
-	for(itr = SceneManager::GetInstance()->scenes->begin(); itr < SceneManager::GetInstance()->scenes->end(); itr++)
+	for (itr = sceneManager.scenes->begin(); itr < sceneManager.scenes->end(); itr++)
 		(*itr)->registerGame(this);
 
 
@@ -63,11 +69,11 @@ void Game::run()
 			if (event.type == sf::Event::Closed)
 				quit();
 			else
-				SceneManager::GetInstance()->getCurrentScene()->handleEvents(event);
+				sceneManager.getCurrentScene()->handleEvents(event);
 		}
 
 		window.clear();
-		SceneManager::GetInstance()->getCurrentScene()->update(currentFrame.asSeconds() - lastFrame.asSeconds());
+		sceneManager.getCurrentScene()->update(currentFrame.asSeconds() - lastFrame.asSeconds());
 		window.display();
 		lastFrame = currentFrame;
 		currentFrame = mainClock.getElapsedTime();
@@ -76,7 +82,7 @@ void Game::run()
 void Game::cleanup()
 {
 
-	SceneManager::GetInstance()->Terminate();
+	sceneManager.Terminate();
 	window.close();
 
 }

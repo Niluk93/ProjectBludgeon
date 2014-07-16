@@ -13,12 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\GameEngine">
-      <UniqueIdentifier>{a5d55850-4b7d-4a01-bed1-6b23c04592c4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\GameEngine">
-      <UniqueIdentifier>{642cd15d-bdb0-4b8d-8244-40a65e5b2412}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\SDK">
       <UniqueIdentifier>{146f3a34-651b-4684-99b6-7b8d4fed2e65}</UniqueIdentifier>
     </Filter>
@@ -31,25 +25,40 @@
     <Filter Include="Source Files\SDK\Tmx">
       <UniqueIdentifier>{f2e077f8-7e1f-4db4-9bf6-c770c1efd95b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\SAGE">
+      <UniqueIdentifier>{a5d55850-4b7d-4a01-bed1-6b23c04592c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SAGE">
+      <UniqueIdentifier>{642cd15d-bdb0-4b8d-8244-40a65e5b2412}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Bludgeon">
+      <UniqueIdentifier>{da9c6e89-9775-4ba9-9947-99707d868355}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Bludgeon">
+      <UniqueIdentifier>{b4f49189-3a28-4a09-8f7c-7511093f80d9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header\GESpineSprite.h">
-      <Filter>Header Files\GameEngine</Filter>
+    <ClInclude Include="include\Sage\sceneManager.h">
+      <Filter>Header Files\SAGE</Filter>
     </ClInclude>
-    <ClInclude Include="src\Animation.h">
-      <Filter>Source Files\GameEngine</Filter>
+    <ClInclude Include="include\Sage\Animation.h">
+      <Filter>Header Files\SAGE</Filter>
     </ClInclude>
-    <ClInclude Include="src\game.h">
-      <Filter>Source Files\GameEngine</Filter>
+    <ClInclude Include="include\Sage\game.h">
+      <Filter>Header Files\SAGE</Filter>
     </ClInclude>
-    <ClInclude Include="src\IScene.h">
-      <Filter>Source Files\GameEngine</Filter>
+    <ClInclude Include="include\Sage\GESpineSprite.h">
+      <Filter>Header Files\SAGE</Filter>
     </ClInclude>
-    <ClInclude Include="src\sceneManager.h">
-      <Filter>Source Files\GameEngine</Filter>
+    <ClInclude Include="include\Sage\IScene.h">
+      <Filter>Header Files\SAGE</Filter>
     </ClInclude>
-    <ClInclude Include="src\Level.h">
-      <Filter>Source Files\GameEngine</Filter>
+    <ClInclude Include="include\Bludgeon\menu.h">
+      <Filter>Header Files\Bludgeon</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Bludgeon\Level.h">
+      <Filter>Header Files\Bludgeon</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -128,18 +137,6 @@
     <ClCompile Include="src\SDK\spine\sfml\spine-sfml.cpp">
       <Filter>Source Files\SDK\spine\sfml</Filter>
     </ClCompile>
-    <ClCompile Include="src\GESpineSprite.cpp">
-      <Filter>Source Files\GameEngine</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Animation.cpp">
-      <Filter>Source Files\GameEngine</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Game.cpp">
-      <Filter>Source Files\GameEngine</Filter>
-    </ClCompile>
-    <ClCompile Include="src\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\SDK\TmxLoader\DebugShape.cpp">
       <Filter>Source Files\SDK\Tmx</Filter>
     </ClCompile>
@@ -160,6 +157,27 @@
     </ClCompile>
     <ClCompile Include="src\SDK\TmxLoader\QuadTreeNode.cpp">
       <Filter>Source Files\SDK\Tmx</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sage\Animation.cpp">
+      <Filter>Source Files\SAGE</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sage\Game.cpp">
+      <Filter>Source Files\SAGE</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sage\GESpineSprite.cpp">
+      <Filter>Source Files\SAGE</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sage\SceneManager.cpp">
+      <Filter>Source Files\SAGE</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Bludgeon\Level.cpp">
+      <Filter>Source Files\Bludgeon</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Bludgeon\menu.cpp">
+      <Filter>Source Files\Bludgeon</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Bludgeon\main.cpp">
+      <Filter>Source Files\Bludgeon</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

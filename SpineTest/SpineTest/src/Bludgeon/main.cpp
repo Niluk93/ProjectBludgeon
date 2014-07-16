@@ -1,9 +1,9 @@
-#include "game.h"
+#include <Sage\game.h>
 
 int main()
 {
 
-	Game *Bludgeon = new Game();
+	sage::Game *Bludgeon = new sage::Game();
 	Bludgeon->init();
 	Bludgeon->run();
 	Bludgeon->cleanup();

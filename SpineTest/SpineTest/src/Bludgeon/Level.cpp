@@ -1,20 +1,8 @@
-#ifndef SPLASHSCENE_H
-#define SPLASHSCENE_H
+#pragma once
 
-#include <stdio.h>
+#include <Bludgeon\Level.h>
 
-#include "IScene.h"
-#include "sceneManager.h"
-
-
-#include <SFML\System.hpp>
-#include <SFML\Graphics.hpp>
-#include <Tmx\MapLoader.h>
-#include <spine\spine-sfml.h>
-#include "GESpineSprite.h"
-
-using namespace std;
-using namespace spine;
+using namespace sage;
 
 
 void callback(AnimationState* state, int trackIndex, EventType type, Event* event, int loopCount) {
@@ -39,30 +27,6 @@ void callback(AnimationState* state, int trackIndex, EventType type, Event* even
 	fflush(stdout);
 }
 
-class level_scene : public IScene
-{
-public:
-	level_scene();
-	void update(float deltaTime);
-	void handleEvents(const sf::Event &evt);
-	void reactivate();
-	void deactivate();
-	void onRegister();
-
-private:
-	
-	
-	bool					mbLoadSuccess;
-	int						iScrollFactor;
-	tmx::MapLoader			*mMapLoader;
-	sf::View				mView;
-	GESpineSprite*			testSpineBoy;
-
-	sf::Texture				testTexture;
-	sf::Sprite				testSprite;
-
-};
-
 level_scene::level_scene() :IScene("LEVEL_DEMO")
 {
 	mbLoadSuccess = true;
@@ -76,18 +40,19 @@ level_scene::level_scene() :IScene("LEVEL_DEMO")
 		mbLoadSuccess = true;
 		mMapLoader->Load("level_test.tmx");
 	}
-		
-	
+
+
 }
 
 void level_scene::onRegister()
 {
 	//Load Spine
-	testSpineBoy = new GESpineSprite("data/goblins-ffd", sf::Vector2f(300, 300), 0.0f, 1.0f);
+	testSpineBoy = new GESpineSprite("data/goblins-ffd", sf::Vector2f(500, 600), 0.0f, 1.0f);
 	testSpineBoy->setAnimation("walk");
 	testSpineBoy->setSkin("goblingirl");
 	//testSpineBoy->setAttachment("level_testleft hand item", "spear");
 	testSpineBoy->setAnimationCallback(callback);
+	
 
 
 	//Viewport works
@@ -95,9 +60,9 @@ void level_scene::onRegister()
 	mView.setCenter(sf::Vector2f(0, 0));
 	//mView.zoom(2);
 	mGame->window.setView(mView);
-	//cout <<"X val :"<< mGame->window.getView().getCenter().x;
-	//testSpineBoy->setPosition(mGame->window.getView().getCenter());
 	testSpineBoy->setScale(0.2f, 0.2f);
+
+	
 }
 
 void level_scene::update(float deltaTime)
@@ -105,10 +70,9 @@ void level_scene::update(float deltaTime)
 	if (mbLoadSuccess)
 	{
 		mGame->window.draw(*mMapLoader);
-		
 		sf::IntRect viewRect = mGame->window.getViewport(mView);
-		testSpineBoy->setPosition(0,-50);
-		//testSpineBoy->setPosition(viewRect.left + viewRect.width * 0.5, viewRect.top + viewRect.height * -0.5);
+		testSpineBoy->setPosition(0, -200);
+		
 		testSpineBoy->draw(&mGame->window, deltaTime);
 	}
 
@@ -124,11 +88,11 @@ void level_scene::handleEvents(const sf::Event &evt)
 		mView = mGame->window.getView();
 		if (evt.key.code == sf::Keyboard::Down)
 		{
-			
+
 			mView.move(sf::Vector2f(0.0f, iScrollFactor));
 			mGame->window.setView(mView);
 		}
-		else if 
+		else if
 			(evt.key.code == sf::Keyboard::Up)
 		{
 			mView.move(sf::Vector2f(0.0f, iScrollFactor * -1));
@@ -147,18 +111,21 @@ void level_scene::handleEvents(const sf::Event &evt)
 			mView.move(sf::Vector2f(iScrollFactor * -1, 0.0f));
 			mGame->window.setView(mView);
 		}
-		
+		else if
+			(evt.key.code == sf::Keyboard::E)
+		{
+			mGame->sceneManager.changeScene("MENU_DEMO");
+		}
+
 	}
 }
 
 void level_scene::reactivate()
 {
-	
+
 }
 
 void level_scene::deactivate()
 {
-
+	
 }
-
-#endif

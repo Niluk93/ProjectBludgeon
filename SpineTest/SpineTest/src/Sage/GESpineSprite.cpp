@@ -1,4 +1,4 @@
-#include "GESpineSprite.h"
+#include <Sage\GESpineSprite.h>
 
 GESpineSprite::GESpineSprite(string _FilePath, sf::Vector2f _startPosition, float _startRotation , float _startScale)
 {

@@ -1,7 +1,8 @@
-#include "Animation.h"
+#include <Sage\Animation.h>
 
+using namespace sage;
 
-Animation::Animation():crop()
+Animation::Animation()
 {
 	
 	this->donePlaying = false;

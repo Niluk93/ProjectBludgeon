@@ -83,18 +83,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Header\GESpineSprite.h" />
-    <ClInclude Include="src\Animation.h" />
-    <ClInclude Include="src\game.h" />
-    <ClInclude Include="src\IScene.h" />
-    <ClInclude Include="src\Level.h" />
-    <ClInclude Include="src\sceneManager.h" />
+    <ClInclude Include="include\Bludgeon\Level.h" />
+    <ClInclude Include="include\Bludgeon\menu.h" />
+    <ClInclude Include="include\Sage\Animation.h" />
+    <ClInclude Include="include\Sage\game.h" />
+    <ClInclude Include="include\Sage\GESpineSprite.h" />
+    <ClInclude Include="include\Sage\IScene.h" />
+    <ClInclude Include="include\Sage\sceneManager.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Animation.cpp" />
-    <ClCompile Include="src\Game.cpp" />
-    <ClCompile Include="src\GESpineSprite.cpp" />
-    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Bludgeon\Level.cpp" />
+    <ClCompile Include="src\Bludgeon\main.cpp" />
+    <ClCompile Include="src\Bludgeon\menu.cpp" />
+    <ClCompile Include="src\Sage\Animation.cpp" />
+    <ClCompile Include="src\Sage\Game.cpp" />
+    <ClCompile Include="src\Sage\GESpineSprite.cpp" />
+    <ClCompile Include="src\Sage\SceneManager.cpp" />
     <ClCompile Include="src\SDK\spine\Animation.c" />
     <ClCompile Include="src\SDK\spine\AnimationState.c" />
     <ClCompile Include="src\SDK\spine\AnimationStateData.c" />
