@@ -87,8 +87,9 @@
     <ClInclude Include="include\Bludgeon\menu.h" />
     <ClInclude Include="include\Sage\Animation.h" />
     <ClInclude Include="include\Sage\game.h" />
-    <ClInclude Include="include\Sage\GESpineSprite.h" />
+    <ClInclude Include="include\Sage\SpineSprite.h" />
     <ClInclude Include="include\Sage\IScene.h" />
+    <ClInclude Include="include\Sage\ParticleSystems.h" />
     <ClInclude Include="include\Sage\sceneManager.h" />
   </ItemGroup>
   <ItemGroup>
@@ -97,7 +98,8 @@
     <ClCompile Include="src\Bludgeon\menu.cpp" />
     <ClCompile Include="src\Sage\Animation.cpp" />
     <ClCompile Include="src\Sage\Game.cpp" />
-    <ClCompile Include="src\Sage\GESpineSprite.cpp" />
+    <ClCompile Include="src\Sage\SpineSprite.cpp" />
+    <ClCompile Include="src\Sage\ParticleSystems.cpp" />
     <ClCompile Include="src\Sage\SceneManager.cpp" />
     <ClCompile Include="src\SDK\spine\Animation.c" />
     <ClCompile Include="src\SDK\spine\AnimationState.c" />

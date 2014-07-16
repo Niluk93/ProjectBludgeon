@@ -47,11 +47,11 @@ level_scene::level_scene() :IScene("LEVEL_DEMO")
 void level_scene::onRegister()
 {
 	//Load Spine
-	testSpineBoy = new GESpineSprite("data/goblins-ffd", sf::Vector2f(500, 600), 0.0f, 1.0f);
+	testSpineBoy = new SpineSprite("data/goblins-ffd", sf::Vector2f(500, 600), 0.0f, 1.0f);
 	testSpineBoy->setAnimation("walk");
 	testSpineBoy->setSkin("goblingirl");
 	//testSpineBoy->setAttachment("level_testleft hand item", "spear");
-	testSpineBoy->setAnimationCallback(callback);
+	testSpineBoy->setAnimationCallback(animationCallback);
 	
 
 
@@ -62,7 +62,8 @@ void level_scene::onRegister()
 	mGame->window.setView(mView);
 	testSpineBoy->setScale(0.2f, 0.2f);
 
-	
+	testParticles = new ParticleSystems(2000);
+	testParticles->setPosition(0, 0);
 }
 
 void level_scene::update(float deltaTime)
@@ -74,8 +75,9 @@ void level_scene::update(float deltaTime)
 		testSpineBoy->setPosition(0, -200);
 		
 		testSpineBoy->draw(&mGame->window, deltaTime);
+		testParticles->update(deltaTime, 0.0f);
+		testParticles->draw(mGame->window, sf::RenderStates::Default);
 	}
-
 }
 
 void level_scene::handleEvents(const sf::Event &evt)

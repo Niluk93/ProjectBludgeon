@@ -48,9 +48,6 @@
     <ClInclude Include="include\Sage\game.h">
       <Filter>Header Files\SAGE</Filter>
     </ClInclude>
-    <ClInclude Include="include\Sage\GESpineSprite.h">
-      <Filter>Header Files\SAGE</Filter>
-    </ClInclude>
     <ClInclude Include="include\Sage\IScene.h">
       <Filter>Header Files\SAGE</Filter>
     </ClInclude>
@@ -59,6 +56,12 @@
     </ClInclude>
     <ClInclude Include="include\Bludgeon\Level.h">
       <Filter>Header Files\Bludgeon</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sage\ParticleSystems.h">
+      <Filter>Header Files\SAGE</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sage\SpineSprite.h">
+      <Filter>Header Files\SAGE</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -164,9 +167,6 @@
     <ClCompile Include="src\Sage\Game.cpp">
       <Filter>Source Files\SAGE</Filter>
     </ClCompile>
-    <ClCompile Include="src\Sage\GESpineSprite.cpp">
-      <Filter>Source Files\SAGE</Filter>
-    </ClCompile>
     <ClCompile Include="src\Sage\SceneManager.cpp">
       <Filter>Source Files\SAGE</Filter>
     </ClCompile>
@@ -178,6 +178,12 @@
     </ClCompile>
     <ClCompile Include="src\Bludgeon\main.cpp">
       <Filter>Source Files\Bludgeon</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sage\ParticleSystems.cpp">
+      <Filter>Source Files\SAGE</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sage\SpineSprite.cpp">
+      <Filter>Source Files\SAGE</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

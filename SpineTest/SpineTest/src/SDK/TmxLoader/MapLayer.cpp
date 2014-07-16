@@ -158,6 +158,7 @@ void MapLayer::draw(sf::RenderTarget& rt, sf::RenderStates states) const
 	if(!visible) return; //skip invisible layers
 
 	states.shader = m_shader;
+	
 	for(const auto& ls : layerSets)
 	{
 		rt.draw(*ls.second, states);

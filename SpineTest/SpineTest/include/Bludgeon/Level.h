@@ -2,7 +2,8 @@
 
 #include <stdio.h>
 #include <Sage\IScene.h>
-#include <Sage\GESpineSprite.h>
+#include <Sage\SpineSprite.h>
+#include <Sage\ParticleSystems.h>
 
 #include <SFML\System.hpp>
 #include <SFML\Graphics.hpp>
@@ -32,9 +33,9 @@ private:
 	int						iScrollFactor;
 	tmx::MapLoader			*mMapLoader;
 	sf::View				mView;
-	GESpineSprite*			testSpineBoy;
+	SpineSprite*			testSpineBoy;
 
 	sf::Texture				testTexture;
 	sf::Sprite				testSprite;
-
+	ParticleSystems*		testParticles;
 };
