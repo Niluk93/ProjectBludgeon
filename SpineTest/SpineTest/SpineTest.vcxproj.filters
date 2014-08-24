@@ -63,6 +63,15 @@
     <ClInclude Include="include\Sage\SpineSprite.h">
       <Filter>Header Files\SAGE</Filter>
     </ClInclude>
+    <ClInclude Include="include\Sage\ResourceManager.hpp">
+      <Filter>Header Files\SAGE</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sage\MemoryPool.hpp">
+      <Filter>Header Files\SAGE</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Sage\Resource.hpp">
+      <Filter>Header Files\SAGE</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\SDK\spine\Animation.c">
@@ -183,6 +192,9 @@
       <Filter>Source Files\SAGE</Filter>
     </ClCompile>
     <ClCompile Include="src\Sage\SpineSprite.cpp">
+      <Filter>Source Files\SAGE</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Sage\MemoryPool.cpp">
       <Filter>Source Files\SAGE</Filter>
     </ClCompile>
   </ItemGroup>

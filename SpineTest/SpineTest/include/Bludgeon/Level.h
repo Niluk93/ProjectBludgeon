@@ -4,12 +4,12 @@
 #include <Sage\IScene.h>
 #include <Sage\SpineSprite.h>
 #include <Sage\ParticleSystems.h>
+#include <Sage\ResourceManager.hpp>
 
 #include <SFML\System.hpp>
 #include <SFML\Graphics.hpp>
 #include <Tmx\MapLoader.h>
 #include <spine\spine-sfml.h>
-
 
 using namespace std;
 using namespace spine;
@@ -34,7 +34,6 @@ private:
 	tmx::MapLoader			*mMapLoader;
 	sf::View				mView;
 	SpineSprite*			testSpineBoy;
-
 	sf::Texture				testTexture;
 	sf::Sprite				testSprite;
 	ParticleSystems*		testParticles;

@@ -2,21 +2,21 @@
 
 using namespace sage;
 
-SpineSprite::SpineSprite(string _FilePath, sf::Vector2f _startPosition, float _startRotation , float _startScale)
+SpineSprite::SpineSprite(std::string _FilePath, sf::Vector2f _startPosition, float _startRotation , float _startScale)
 {
-	string atlasPath = _FilePath;
+	std::string atlasPath = _FilePath;
 	atlasPath.append(".atlas");
 	m_Atlas = Atlas_createFromFile(atlasPath.c_str(), 0);
 
 	SkeletonJson* skeletonJson = SkeletonJson_create(m_Atlas);
 	skeletonJson->scale = 1.0f;
 
-	string jsonPath = _FilePath;
+	std::string jsonPath = _FilePath;
 	jsonPath.append(".json");
 	m_SkeletonData = SkeletonJson_readSkeletonDataFile(skeletonJson, jsonPath.c_str());
 	if (!m_SkeletonData)
 	{
-		cout << "Error Loading Skeleton Data : " << skeletonJson->error << endl;
+		std::cout << "Error Loading Skeleton Data : " << skeletonJson->error << std::endl;
 		exit(0);
 	}
 
@@ -216,9 +216,9 @@ void SpineSprite::setAnimation(spAnimation* _Animation, bool loop)
 	AnimationState_setAnimation(m_SkeletonDrawable->state, 0, _Animation, loop);
 }
 
-void SpineSprite::setAnimation(string _AnimationName, bool loop)
+void SpineSprite::setAnimation(std::string _AnimationName, bool loop)
 {
-	for (vector<spAnimation*>::iterator itrAnimation = m_AnimationList.begin(); itrAnimation != m_AnimationList.end(); itrAnimation++)
+	for (std::vector<spAnimation*>::iterator itrAnimation = m_AnimationList.begin(); itrAnimation != m_AnimationList.end(); itrAnimation++)
 	{
 		if ((*itrAnimation)->name == _AnimationName)
 		{
@@ -235,9 +235,9 @@ void SpineSprite::setSkin(spSkin* _Skin)
 	Skeleton_setSlotsToSetupPose(m_Skeleton);
 }
 
-void SpineSprite::setSkin(string _SkinName)
+void SpineSprite::setSkin(std::string _SkinName)
 {
-	for (vector<spSkin*>::iterator itrSkin = m_SkinList.begin(); itrSkin != m_SkinList.end(); itrSkin++)
+	for (std::vector<spSkin*>::iterator itrSkin = m_SkinList.begin(); itrSkin != m_SkinList.end(); itrSkin++)
 	{
 		if ((*itrSkin)->name == _SkinName)
 		{
@@ -253,7 +253,7 @@ spSkin SpineSprite::getSkin()
 #pragma endregion REGION_SKINS
 
 #pragma region REGION_ATTACHMENTS
-void SpineSprite::setAttachment(string _SlotName, string _AttachmentName)
+void SpineSprite::setAttachment(std::string _SlotName, std::string _AttachmentName)
 {
 	Skeleton_setAttachment(m_Skeleton, _SlotName.c_str(), _AttachmentName.c_str());
 }

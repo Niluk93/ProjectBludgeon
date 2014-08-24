@@ -1,6 +1,6 @@
 #ifndef _GE_SPINE_SPRITE_
 #define _GE_SPINE_SPRITE_
-#define DEBUG
+//#define DEBUG
 #include <iostream>
 #include <string>
 #include <stdio.h>
@@ -10,7 +10,6 @@
 #include "SFML\Window.hpp"
 #include "spine\spine-sfml.h"
 
-using namespace std;
 using namespace spine;
 
 namespace sage
@@ -24,9 +23,9 @@ namespace sage
 		AnimationStateData*		m_AnimationStateData;
 		SkeletonDrawable*		m_SkeletonDrawable;
 		Skeleton*				m_Skeleton;
-		vector<Skin*>			m_SkinList;
+		std::vector<Skin*>			m_SkinList;
 		int						m_SkinCount;
-		vector<Animation*>		m_AnimationList;
+		std::vector<Animation*>		m_AnimationList;
 		int						m_AnimationCount;
 		sf::Vector2f			m_Position;
 		sf::Vector2f			m_Scale;
@@ -40,7 +39,7 @@ namespace sage
 	public:
 		/**Create a new Sprite Instance.
 		*Requires Spine Atlas path with filename without extension.*/
-		SpineSprite(string _FilePath, sf::Vector2f _startPosition = sf::Vector2f(0, 0), float _Rotation = 0.0f, float _startScale = 1.0f);
+		SpineSprite(std::string _FilePath, sf::Vector2f _startPosition = sf::Vector2f(0, 0), float _Rotation = 0.0f, float _startScale = 1.0f);
 		~SpineSprite();
 		void draw(sf::RenderWindow* _RenderWindow, float _DeltaTime);
 
@@ -61,14 +60,14 @@ namespace sage
 		void scale(sf::Vector2f _Factor);
 
 		void setAnimation(spAnimation* _Animation, bool loop = true);
-		void setAnimation(string _AnimationName, bool loop = true);
+		void setAnimation(std::string _AnimationName, bool loop = true);
 		spAnimation getAnimation();
 
 		void setSkin(spSkin* _Skin);
-		void setSkin(string _SkinName);
+		void setSkin(std::string _SkinName);
 		spSkin getSkin();
 
-		void setAttachment(string _SlotName, string _AttachmentName);
+		void setAttachment(std::string _SlotName, std::string _AttachmentName);
 
 		void setColor(int r, int g, int b, int a);
 		void setColor(sf::Color _Color);

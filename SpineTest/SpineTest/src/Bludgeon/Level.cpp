@@ -52,8 +52,6 @@ void level_scene::onRegister()
 	testSpineBoy->setSkin("goblingirl");
 	//testSpineBoy->setAttachment("level_testleft hand item", "spear");
 	testSpineBoy->setAnimationCallback(animationCallback);
-	
-
 
 	//Viewport works
 	mView = mGame->window.getView();
@@ -73,7 +71,7 @@ void level_scene::update(float deltaTime)
 		mGame->window.draw(*mMapLoader);
 		sf::IntRect viewRect = mGame->window.getViewport(mView);
 		testSpineBoy->setPosition(0, -200);
-		
+
 		testSpineBoy->draw(&mGame->window, deltaTime);
 		testParticles->update(deltaTime, 0.0f);
 		testParticles->draw(mGame->window, sf::RenderStates::Default);
