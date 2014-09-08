@@ -72,6 +72,9 @@
     <ClInclude Include="include\Sage\Resource.hpp">
       <Filter>Header Files\SAGE</Filter>
     </ClInclude>
+    <ClInclude Include="include\Sage\Sprite.h">
+      <Filter>Header Files\SAGE</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\SDK\spine\Animation.c">

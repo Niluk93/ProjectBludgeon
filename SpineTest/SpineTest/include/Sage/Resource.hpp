@@ -29,8 +29,14 @@ class ReferenceData {
 public:
 	ReferenceData() { myCount = 0; };
     virtual ~ReferenceData() {};
-    void IncRef() { myCount++; };
-    void DecRef() { myCount--; };
+	void IncRef() 
+	{ 
+		myCount++;
+	};
+	void DecRef() 
+	{ 
+		myCount--;
+	};
 	int GetCount() const { return myCount; };
 
 private:

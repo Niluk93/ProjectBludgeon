@@ -53,10 +53,17 @@ void level_scene::onRegister()
 	//testSpineBoy->setAttachment("level_testleft hand item", "spear");
 	testSpineBoy->setAnimationCallback(animationCallback);
 
+	sf::Sprite sprite1;
+	sprite1.setTexture(*mGame->textureManager.Get("data/redBall.png"));
+	testSprites.push_back(sprite1);
+
+	sf::Sprite sprite2;
+	sprite2.setTexture(*mGame->textureManager.Get("data/redBall.png"));
+	testSprites.push_back(sprite2);
+
 	//Viewport works
 	mView = mGame->window.getView();
 	mView.setCenter(sf::Vector2f(0, 0));
-	//mView.zoom(2);
 	mGame->window.setView(mView);
 	testSpineBoy->setScale(0.2f, 0.2f);
 
@@ -71,6 +78,11 @@ void level_scene::update(float deltaTime)
 		mGame->window.draw(*mMapLoader);
 		sf::IntRect viewRect = mGame->window.getViewport(mView);
 		testSpineBoy->setPosition(0, -200);
+
+		for (vector<sf::Sprite>::iterator it = testSprites.begin(); it != testSprites.end(); it++)
+		{
+			mGame->window.draw(*it);
+		}
 
 		testSpineBoy->draw(&mGame->window, deltaTime);
 		testParticles->update(deltaTime, 0.0f);

@@ -22,6 +22,7 @@
 
 #include <Sage\MemoryPool.hpp>
 #include <Sage\Resource.hpp>
+#include <iostream>
 
 ////////////////////////////////////////////////////////////////////////////////////
 /// @brief Abstract class for managing resources.
@@ -96,6 +97,7 @@ public:
 		{
 			if(it->second.GetCount() > 0)
 			{
+				std::cout << "Get" << std::endl;
 				return Resource<Type, Identifier, MaxNum>(this, &it->second, id);
 			}
 			else
@@ -125,6 +127,7 @@ protected:
 
 	Type *GetResource(const Identifier &id) const
 	{
+		std::cout << myResources.find(id)->second << std::endl;
 		return myResources.find(id)->second;
 	}
 
@@ -237,7 +240,7 @@ class TextureManager : public ResourceManager<sf::Texture, std::string, 10000U>
 protected:
 	virtual bool Load(sf::Texture &resource, const std::string &id) const
 	{
-		cout << "Load"<<endl;
+		std::cout << "Load" << std::endl;
 		if(resource.loadFromFile(id))
 			return true;
 		return false;

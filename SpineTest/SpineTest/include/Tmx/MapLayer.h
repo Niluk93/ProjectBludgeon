@@ -63,6 +63,7 @@ namespace tmx
 		const sf::Texture& m_texture;
 		mutable std::vector<TileQuad::Ptr> m_quads;
 		mutable std::vector<sf::Vertex> m_vertices;
+		mutable std::vector<sf::Vertex> m_verticesDrawn;
 		void draw(sf::RenderTarget& rt, sf::RenderStates states) const;
 
 		sf::FloatRect m_boundingBox;

@@ -94,6 +94,7 @@
     <ClInclude Include="include\Sage\IScene.h" />
     <ClInclude Include="include\Sage\ParticleSystems.h" />
     <ClInclude Include="include\Sage\sceneManager.h" />
+    <ClInclude Include="include\Sage\Sprite.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Bludgeon\Level.cpp" />
