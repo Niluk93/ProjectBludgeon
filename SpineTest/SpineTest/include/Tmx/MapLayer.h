@@ -58,6 +58,7 @@ namespace tmx
 		LayerSet(const sf::Texture& texture);
 		TileQuad::Ptr AddTile(sf::Vertex vt0, sf::Vertex vt1, sf::Vertex vt2, sf::Vertex vt3);
 		void Cull(const sf::FloatRect& bounds);
+		
 
 	private:
 		const sf::Texture& m_texture;
@@ -69,6 +70,7 @@ namespace tmx
 		sf::FloatRect m_boundingBox;
 		void m_UpdateAABB(sf::Vector2f position, sf::Vector2f size);
 		bool m_visible;
+		
 	};
 
 
@@ -111,6 +113,7 @@ namespace tmx
 	private:
 		const sf::Shader* m_shader;
 		void draw(sf::RenderTarget& rt, sf::RenderStates states) const;
+		
 	};
 };
 

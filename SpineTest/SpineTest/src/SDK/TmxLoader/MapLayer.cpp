@@ -90,8 +90,12 @@ void LayerSet::Cull(const sf::FloatRect& bounds)
 //private
 void LayerSet::draw(sf::RenderTarget& rt, sf::RenderStates states) const
 {
-	for(auto& q : m_quads)
+	for (int j = 0; j < m_quads.size() / 2; j++)
+	//for (tmx::TileQuad::Ptr& q : m_quads)
+	//for(auto& q : m_quads)
 	{
+		
+		tmx::TileQuad::Ptr& q = m_quads[j];
 		if(q->m_needsUpdate)
 		{
 			for(auto& i : q->m_indices)
@@ -105,7 +109,7 @@ void LayerSet::draw(sf::RenderTarget& rt, sf::RenderStates states) const
 	if(!m_vertices.empty() && m_visible)
 	{
 		states.texture = &m_texture;
-		rt.draw(&m_vertices[0], static_cast<unsigned int>(m_vertices.size()), sf::Quads, states);
+		rt.draw(&m_vertices[0], static_cast<unsigned int>(m_quads.size() / 2), sf::Quads, states);
 	}
 }
 
