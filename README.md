@@ -8,7 +8,6 @@ Currently, it supports the following features-
 
 2D sprites-
     There are two kinds of 2D sprites-
-    
     Sprite Sheets- This is self-explanatory, as this is the basic type of sprite animations that most developers are already comfortable with.
     Spine 2D - We also support 2D skeletal mesh animations made by using the Spine 2D software (http://esotericsoftware.com/).
     
